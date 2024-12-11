@@ -1,0 +1,279 @@
+﻿
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/HomeMaster.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .menu-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+            .menu-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .menu-card img {
+                height: 200px;
+                object-fit: cover;
+            }
+
+        .menu-price {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .menu-container {
+            margin-top: 30px;
+        }
+
+        .modal-header {
+            background-color: #f1f1f1;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .modal-footer {
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 600px;
+        }
+
+        .outer {
+            background: url('https://plus.unsplash.com/premium_photo-1691030658477-1c8decbdfb18?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWFuJTIwc3dlZXR8ZW58MHx8MHx8fDA%3D') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.85;
+        }
+    </style>
+
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="outer">
+        <div class="container menu-container" data-aos="zoom-in" data-aos-duration="1000">
+            <h1 data-aos="fade-down" data-aos-duration="1000" class="text-center my-4">Our Menu</h1>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-card">
+                        <img data-aos="zoom-in" data-aos-duration="1000" src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                             class="card-img-top" alt="Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dish Name 3</h5>
+                            <p class="card-text">A delicious dish with flavorful ingredients.</p>
+                            <p class="menu-price">$12.99</p>
+                            <button class="btn btn-primary know-more" data-bs-toggle="modal"
+                                    data-bs-target="#dish3Modal">
+                                Know More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZvb2R8ZW58MHx8MHx8fDA%3D"
+                             class="card-img-top" alt="Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dish Name 1</h5>
+                            <p class="card-text">A delicious dish with flavorful ingredients.</p>
+                            <p class="menu-price">$12.99</p>
+                            <button class="btn btn-primary know-more" data-bs-toggle="modal"
+                                    data-bs-target="#dish1Modal">
+                                Know More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1483918793747-5adbf82956c4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D"
+                             class="card-img-top" alt="Dish 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Dish Name 2</h5>
+                            <p class="card-text">A tasty treat with unique spices and herbs.</p>
+                            <p class="menu-price">$14.99</p>
+                            <button class="btn btn-primary know-more" data-bs-toggle="modal"
+                                    data-bs-target="#dish2Modal">
+                                Know More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container menu-container" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1672099260380-4ba66eead8ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzdCUyMGZvb2R8ZW58MHx8MHx8fDA%3D"
+                             class="card-img-top" alt="Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dish Name 3</h5>
+                            <p class="card-text">A delicious dish with flavorful ingredients.</p>
+                            <p class="menu-price">$12.99</p>
+                            <button class="btn btn-primary know-more" data-bs-toggle="modal"
+                                    data-bs-target="#dish3Modal">
+                                Know More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1664990035720-faac522df41f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW9tb3N8ZW58MHx8MHx8fDA%3D"
+                             class="card-img-top" alt="Dish 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Dish Name 1</h5>
+                            <p class="card-text">A delicious dish with flavorful ingredients.</p>
+                            <p class="menu-price">$12.99</p>
+                            <button class="btn btn-primary know-more" data-bs-toggle="modal"
+                                    data-bs-target="#dish1Modal">
+                                Know More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card menu-card">
+                        <img src="https://images.unsplash.com/photo-1711153419402-336ee48f2138?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwdGhhbGl8ZW58MHx8MHx8fDA%3D"
+                             class="card-img-top" alt="Dish 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Dish Name 2</h5>
+                            <p class="card-text">A tasty treat with unique spices and herbs.</p>
+                            <p class="menu-price">$14.99</p>
+                            <button class="btn btn-primary know-more" data-bs-toggle="modal"
+                                    data-bs-target="#dish2Modal">
+                                Know More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Modal for Dish 1 -->
+        <div class="modal fade" id="dish1Modal" tabindex="-1" aria-labelledby="dish1ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dish1ModalLabel">Dish Name 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Detailed information about Dish Name 1. This dish is made with fresh ingredients and a secret
+                        recipe that brings out a unique flavor.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Modal for Dish 3 -->
+        <div class="modal fade" id="dish3Modal" tabindex="-1" aria-labelledby="dish3ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dish3ModalLabel">Dish Name 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Detailed information about Dish Name 3. This dish is made with fresh ingredients and a secret
+                        recipe that brings out a unique flavor.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Dish 2 -->
+        <div class="modal fade" id="dish2Modal" tabindex="-1" aria-labelledby="dish2ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="dish2ModalLabel">Dish Name 2</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Detailed information about Dish Name 2. This dish features a combination of exotic spices and
+                        fresh ingredients to create a flavorful experience.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const knowMoreButtons = document.querySelectorAll('.know-more');
+            console.log(knowMoreButtons)
+
+            knowMoreButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+
+                    const dishTitle = this.closest('.card').querySelector('.card-title').innerText;
+
+
+                    console.log(`Know More clicked for: ${dishTitle}`);
+                });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
